@@ -336,7 +336,7 @@ internal class MPVView(context: Context, attrs: AttributeSet) : SurfaceView(cont
     fun cycleHwdec() = MPVLib.command(arrayOf("cycle-values", "hwdec", "mediacodec-copy", "no"))
 
     fun cycleSpeed() {
-        val speeds = arrayOf(0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0)
+        val speeds = arrayOf(0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0)
         val currentSpeed = playbackSpeed ?: 1.0
         val index = speeds.indexOfFirst { it > currentSpeed }
         playbackSpeed = speeds[if (index == -1) 0 else index]
